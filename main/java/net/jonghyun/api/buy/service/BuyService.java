@@ -1,5 +1,7 @@
 package net.jonghyun.api.buy.service;
 
+import net.jonghyun.api.buy.domain.BuyDTO;
+
 /**
  * packageName: net.jonghyun.api.buy.service
  * fileName     : BuyService

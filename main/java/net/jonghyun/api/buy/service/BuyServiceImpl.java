@@ -1,5 +1,7 @@
 package net.jonghyun.api.buy.service;
 
+import net.jonghyun.api.buy.domain.BuyDTO;
+
 /**
  * packageName: net.jonghyun.api.buy.service
  * fileName     : BuyServiceImpl
@@ -11,5 +13,5 @@ package net.jonghyun.api.buy.service;
  * ================================
  * 2022-02-11        전종현       최초 생성
  */
-public class BuyServiceImpl implements BuyService {
+public class BuyServiceImpl implements BuyService{
 }

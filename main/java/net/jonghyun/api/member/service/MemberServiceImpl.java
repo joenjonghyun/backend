@@ -13,44 +13,34 @@ import net.jonghyun.api.member.domain.MemberDTO;
  * ================================
  * 2022-02-11        전종현       최초 생성
  */
-public class MemberServiceImpl implements MemberService {
+public class MemberServiceImpl implements MemberService{
     @Override
-    public String mem_Id(MemberDTO memberDTO) {
+    public String Membershiplist() {
         return null;
     }
 
     @Override
-    public String mem_Name(MemberDTO memberDTO) {
+    public String Membershipinformation() {
         return null;
     }
 
     @Override
-    public String mem_Number(MemberDTO memberDTO) {
+    public String Checkthelist() {
         return null;
     }
 
     @Override
-    public String address(MemberDTO memberDTO) {
+    public String Registertosendemails() {
         return null;
     }
 
     @Override
-    public String phone1(MemberDTO memberDTO) {
+    public String Savingmoneylist() {
         return null;
     }
 
     @Override
-    public String phone2(MemberDTO memberDTO) {
-        return null;
-    }
-
-    @Override
-    public String height(MemberDTO memberDTO) {
-        return null;
-    }
-
-    @Override
-    public String debut_Date(MemberDTO memberDTO) {
+    public String Checkthedetailsofthesavings() {
         return null;
     }
 }
