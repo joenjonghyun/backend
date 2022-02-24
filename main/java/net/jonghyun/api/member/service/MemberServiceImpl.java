@@ -1,6 +1,7 @@
 package net.jonghyun.api.member.service;
 
 import net.jonghyun.api.member.domain.MemberDTO;
+import org.springframework.stereotype.Service;
 
 /**
  * packageName: net.jonghyun.api.member.service
@@ -13,6 +14,7 @@ import net.jonghyun.api.member.domain.MemberDTO;
  * ================================
  * 2022-02-11        전종현       최초 생성
  */
+@Service
 public class MemberServiceImpl implements MemberService{
     @Override
     public String Membershiplist() {
@@ -41,6 +43,21 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public String Checkthedetailsofthesavings() {
+        return null;
+    }
+
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
         return null;
     }
 }

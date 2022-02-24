@@ -20,4 +20,7 @@ public interface MemberService {
     String Registertosendemails();
     String Savingmoneylist();
     String Checkthedetailsofthesavings();
+    String calc();
+    String grade();
+    String bmi();
 }

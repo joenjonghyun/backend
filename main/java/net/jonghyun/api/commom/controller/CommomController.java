@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static org.graalvm.compiler.asm.amd64.AMD64Assembler.OperandSize.SD;
-
 /**
  * packageName: net.jonghyun.api.commom.controller
  * fileName     : CommomController
