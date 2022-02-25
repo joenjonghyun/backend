@@ -1,6 +1,11 @@
 package net.jonghyun.api.member.service;
 
+import lombok.RequiredArgsConstructor;
+import net.jonghyun.api.member.domain.BmiDTO;
+import net.jonghyun.api.member.domain.CalcDTO;
+import net.jonghyun.api.member.domain.GradeDTO;
 import net.jonghyun.api.member.domain.MemberDTO;
+import net.jonghyun.api.member.repository.MemberRepository;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,49 +20,32 @@ import org.springframework.stereotype.Service;
  * 2022-02-11        전종현       최초 생성
  */
 @Service
+@RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
+    private final MemberRepository repository;
     @Override
-    public String Membershiplist() {
-        return null;
+    public String calc(CalcDTO calc) {
+        int a = calc.getNum1();
+        int b = calc.getNum2();
+        int res = 0;
+
+        switch (calc.getOpcode()){
+            case "+" : res = a + b; break;
+            case "-" : res = a - b; break;
+            case "*" : res = a * b; break;
+            case "/" : res = a / b; break;
+            case "%" : res = a % b; break;
+        }
+        return String.format("%d %s %d= %d", a, calc.getOpcode(), b, res);
     }
 
     @Override
-    public String Membershipinformation() {
-        return null;
+    public String bmi(BmiDTO bmi) {
+        return repository.bmi(bmi);
     }
 
     @Override
-    public String Checkthelist() {
-        return null;
-    }
-
-    @Override
-    public String Registertosendemails() {
-        return null;
-    }
-
-    @Override
-    public String Savingmoneylist() {
-        return null;
-    }
-
-    @Override
-    public String Checkthedetailsofthesavings() {
-        return null;
-    }
-
-    @Override
-    public String calc() {
-        return null;
-    }
-
-    @Override
-    public String grade() {
-        return null;
-    }
-
-    @Override
-    public String bmi() {
-        return null;
+    public String grade(GradeDTO grade) {
+        return repository.grade(grade);
     }
 }

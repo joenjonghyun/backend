@@ -1,5 +1,8 @@
 package net.jonghyun.api.member.service;
 
+import net.jonghyun.api.member.domain.BmiDTO;
+import net.jonghyun.api.member.domain.CalcDTO;
+import net.jonghyun.api.member.domain.GradeDTO;
 import net.jonghyun.api.member.domain.MemberDTO;
 
 /**
@@ -13,14 +16,11 @@ import net.jonghyun.api.member.domain.MemberDTO;
  * ================================
  * 2022-02-11        전종현       최초 생성
  */
+//인터페이스는 객체가 아니기 땜에 아무것도 안 써줌
 public interface MemberService {
-    String Membershiplist();
-    String Membershipinformation();
-    String Checkthelist();
-    String Registertosendemails();
-    String Savingmoneylist();
-    String Checkthedetailsofthesavings();
-    String calc();
-    String grade();
-    String bmi();
+    String calc(CalcDTO calc);
+
+    String bmi(BmiDTO bmi);
+
+    String grade(GradeDTO grade);
 }

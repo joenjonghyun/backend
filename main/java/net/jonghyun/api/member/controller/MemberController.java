@@ -1,7 +1,11 @@
 package net.jonghyun.api.member.controller;
 
 import lombok.RequiredArgsConstructor;
+import net.jonghyun.api.member.domain.BmiDTO;
+import net.jonghyun.api.member.domain.CalcDTO;
+import net.jonghyun.api.member.domain.GradeDTO;
 import net.jonghyun.api.member.domain.MemberDTO;
+import net.jonghyun.api.member.repository.MemberRepository;
 import net.jonghyun.api.member.service.MemberService;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,18 +25,20 @@ import java.util.Map;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/member")
 public class MemberController {
-
     private final MemberService service;
-
-    @GetMapping("/member/bmi/{username}/{height}/{weight}")
-    public String getBmi(@PathVariable String username,
-                         @PathVariable double height,
-                         @PathVariable double weight) {
-        System.out.println("리액트에서 넘어온 이름 :" + username);
-        System.out.println("리액트에서 넘어온 키 :" + height);
-        System.out.println("리액트에서 넘어온 무게 :" + weight);
-        return "BMI 는 정상";
+    @PostMapping("/bmi")
+    public String bmi(@RequestBody BmiDTO bmi) {
+        return service.bmi(bmi);
+    }
+    @PostMapping("/calc")
+    public String calc(@RequestBody CalcDTO calc) {
+        return service.calc(calc);
+    }
+    @PostMapping("/grade")
+    public String grade(@RequestBody GradeDTO grade){
+        return service.grade(grade);
     }
 }
 
